@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF14CA2A-A172-47CE-AD30-FAB8CE10020E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MMDoCHistoryV2</RootNamespace>
+    <AssemblyName>MMDoCHistoryV2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoUpdate.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="ConditionTypes\Card_in_deck.cs" />
+    <Compile Include="ConditionTypes\Card_was_drawn.cs" />
+    <Compile Include="ConditionTypes\Card_was_played.cs" />
+    <Compile Include="ConditionTypes\Duel_start_time.cs" />
+    <Compile Include="ConditionTypes\Game_duration.cs" />
+    <Compile Include="ConditionTypes\Game_end.cs" />
+    <Compile Include="ConditionTypes\I_started.cs" />
+    <Compile Include="ConditionTypes\Player_elo.cs" />
+    <Compile Include="ConditionTypes\Player_hero.cs" />
+    <Compile Include="ConditionTypes\Player_name.cs" />
+    <Compile Include="ConditionTypes\Player_surrendered.cs" />
+    <Compile Include="ConditionTypes\Player_turns.cs" />
+    <Compile Include="CustomRTF.cs" />
+    <Compile Include="EditCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCondition.Designer.cs">
+      <DependentUpon>EditCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFilter.Designer.cs">
+      <DependentUpon>EditFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs" />
+    <Compile Include="Filtering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDecks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDecks.Designer.cs">
+      <DependentUpon>GameDecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLog.Designer.cs">
+      <DependentUpon>GameLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sorting.cs" />
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditCondition.resx">
+      <DependentUpon>EditCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFilter.resx">
+      <DependentUpon>EditFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDecks.resx">
+      <DependentUpon>GameDecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLog.resx">
+      <DependentUpon>GameLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Replays\Replays.csproj">
+      <Project>{BADC9E74-6381-4A1C-A296-4FE1B45BA539}</Project>
+      <Name>Replays</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
