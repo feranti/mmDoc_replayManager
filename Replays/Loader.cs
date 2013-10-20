@@ -222,7 +222,7 @@ namespace Replays
 
                     try
                     {
-                        Replay re = new Replay(f.FullName, f.CreationTime);
+                        Replay re = new Replay(f.FullName, f.LastWriteTime);
                         replayInfo.Add(re);
                         loadedFilenames[f.FullName] = re;
                     }
