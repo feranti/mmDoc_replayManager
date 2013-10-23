@@ -32,6 +32,12 @@ namespace MMDoCHistoryV2
             textBox7.Text = total == 0 ? "0.00 %" : (((float)replays.Count(e => e.Score > 0 && e.Finished) / (float)total * 100.0f).ToString("0.00") + " %");
             textBox5.Text = total == 0 ? "0.00 %" : (((float)replays.Count(e => e.Score < 0 && e.Finished) / (float)total * 100.0f).ToString("0.00") + " %");
             textBox6.Text = total == 0 ? "0.00 %" : (((float)replays.Count(e => e.Score == 0 && e.Finished) / (float)total * 100.0f).ToString("0.00") + " %");
+
+            textBox31.Text = replays.Count(e => e.Score > 0 && e.OwnerPlayer == 0 && e.Finished).ToString();
+            textBox30.Text = replays.Count(e => e.Score > 0 && e.OwnerPlayer == 1 && e.Finished).ToString();
+            textBox29.Text = total == 0 ? "0.00 %" : (((float)replays.Count(e => e.Score > 0 && e.OwnerPlayer == 0 && e.Finished) / (float)total * 100.0f).ToString("0.00") + " %");
+            textBox28.Text = total == 0 ? "0.00 %" : (((float)replays.Count(e => e.Score > 0 && e.OwnerPlayer == 1 && e.Finished) / (float)total * 100.0f).ToString("0.00") + " %");
+
             textBox8.Text = replays.Count == 0 ? "0.00" : replays.Average(e => e.OwnerPlayer == 0 ? e.EloPlayer1 : e.EloPlayer2).ToString("0.00");
             textBox9.Text = replays.Count == 0 ? "0.00" : replays.Average(e => e.OwnerPlayer == 1 ? e.EloPlayer1 : e.EloPlayer2).ToString("0.00");
             textBox10.Text = replays.Count == 0 ? "0" : Form1.GetNumberCom(replays.Sum(e => e.EarnedXP));
@@ -239,6 +245,11 @@ namespace MMDoCHistoryV2
         private void Stats_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.ClosedForm(this);
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
