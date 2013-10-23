@@ -246,10 +246,5 @@ namespace MMDoCHistoryV2
         {
             form.ClosedForm(this);
         }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
